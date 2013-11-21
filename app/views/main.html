@@ -1,9 +1,25 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mesage Processor</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#/linkone">Link One</a></li>
+            <li><a href="#/linktwo">Link Two</a></li>
+        </ul>
+    </nav>
+
+    <div style="padding-top: 60px;"></div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <ul>
+                <li ng-repeat="thing in messages">{{thing}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <li ng-repeat="thing in messages">{{thing}}</li>
+        </div>
+    </div>
 </div>
