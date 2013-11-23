@@ -2,7 +2,7 @@
     <div style="padding-top: 120px;"></div>
     <div class="row">
         <div class="col-md-5">
-            <div class="panel panel-success">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">To-do List ({{unprocessedMsg.length}})</h3>
                 </div>
@@ -22,7 +22,13 @@
                 <div class="panel-body">
                     <div ng-hide="selected">Not selected</div>
                     <div ng-show="selected">
-                        {{selected}}
+                        <div ng-show="selected.type == 'bd'">
+                            bd
+                        </div>
+                        <div ng-show="selected.type == 'congrat'">
+                            congrat
+                        </div>
+                        <!--{{selected}}-->
                     </div>
                 </div>
             </div>
