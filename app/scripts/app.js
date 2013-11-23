@@ -27,6 +27,9 @@ angular.module('messageProcessorApp', ['ngCookies'])
 //      $httpProvider.responseInterceptors.push('httpInterceptor');
   })
     .run(function($rootScope,$location,$cookieStore){
+
+        $rootScope.loggeduser = $cookieStore.get('loggeduser');
+
         $rootScope.$on('$routeChangeStart',function(event, next, current) {
 
             var loggedUser = $cookieStore.get('loggeduser');

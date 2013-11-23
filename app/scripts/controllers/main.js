@@ -16,8 +16,17 @@ angular.module('messageProcessorApp')
     }
     ])
     .controller('ProcessMsgCtrl',['$scope',function($scope){
-        $scope.unprocessedMsg = [{id:'1',type:'bd',gift:'iphone',processed:false},
-            {id:'2',type:'congrat',babyName:'Ted',birthDate:'01-03-2011',processed:false}];
+        $scope.unprocessedMsg = [{id:'1',type:'bd',name:'Allan',gift:'iphone',processed:false},
+            {id:'2',type:'congrat',name:'Ted',birthDate:'01-03-2011',processed:false},
+            {id:'3',type:'congrat',name:'Dolly',birthDate:'01-03-2011',processed:false},
+            {id:'4',type:'congrat',name:'Maden',birthDate:'01-03-2011',processed:false},
+            {id:'5',type:'congrat',name:'Rei',birthDate:'01-03-2011',processed:false}];
+
+        $scope.selected = undefined;
+
+        $scope.setSelected = function(id){
+            $scope.selected = _.find($scope.unprocessedMsg,function(msg){return msg.id==id});
+        }
     }])
     .controller('ProcessedMsgCtrl',['$scope',function($scope){
         $scope.unprocessedMsg = [{id:'1',type:'bd',gift:'iphone',processed:false},
@@ -37,9 +46,6 @@ angular.module('messageProcessorApp')
         return {
             templateUrl: 'views/directive/itemList.html',
             restrict:'A',
-            scope:{
-                item:'='
-            },
             link: function(scope, element, attrs){
 //                element.find('.open-btn').click(function(){
 //                    console.log(scope.item);
