@@ -26,16 +26,17 @@ angular.module('messageProcessorApp', ['ngCookies'])
 
 //      $httpProvider.responseInterceptors.push('httpInterceptor');
   })
-    .run(function($rootScope,$location){
+    .run(function($rootScope,$location,$cookieStore){
         $rootScope.$on('$routeChangeStart',function(event, next, current) {
-            if($rootScope.loggedUser==null){
-                if ( next.templateUrl == "views/signin.html" ) {
-                    // already going to #login, no redirect needed
-                    console.log('already sign in page')
-                } else {
-                    console.log('@ '+next.templateUrl+' going to signin');
-                    $location.path("/signin");
-                }
+
+            var loggedUser = $cookieStore.get('loggeduser');
+
+            if(loggedUser==null){
+                if ( next.templateUrl == "views/signin.html" ) {}
+                else $location.path("/signin");
+
+            }else if(next.templateUrl == "views/signin.html"){
+                $location.path('/');
             }
         });
     });
