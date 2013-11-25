@@ -1,10 +1,35 @@
-var mock, notify;
+var mock, _msgProcessorLogic;
 
+describe('Service: MsgProcessorLogic', function () {
+    beforeEach(function(){
+        module('messageProcessorApp');
 
+//        module(function($provide){});
 
-xit('should not alert first two notifications', function() {
-    notify('one');
-    notify('two');
+        inject(function($injector) {
+            _msgProcessorLogic = $injector.get('MsgProcessorLogic');
+        });
+    });
 
-    expect(mock.alert).not.toHaveBeenCalled();
+    it('should have 5 unprocessed message & 0 processed msg at the start', function() {
+        expect(_msgProcessorLogic.getUnprocessedList().length).toBe(6);
+        expect(_msgProcessorLogic.getProcessedList().length).toBe(0);
+    });
+
+    it('should expect gift iphone processed', function() {
+        expect(_msgProcessorLogic.getUnprocessedList().length).toBe(6);
+        expect(_msgProcessorLogic.getProcessedList().length).toBe(0);
+
+        expect(_msgProcessorLogic.processGift('12','iphone'));
+
+        expect(_msgProcessorLogic.getUnprocessedList().length).toBe(5);
+        expect(_msgProcessorLogic.getProcessedList().length).toBe(1);
+        expect(_msgProcessorLogic.getProcessedList()[0].gift).toBe('iphone');
+    });
+
+    xit('state', function() {
+        expect(_msgProcessorLogic.getUnprocessedList().length).toBe(6);
+        expect(_msgProcessorLogic.getProcessedList().length).toBe(0);
+    });
+
 });
