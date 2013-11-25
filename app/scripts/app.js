@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('messageProcessorApp', ['ngCookies','ui.date','ui.select2'])
+angular.module('messageProcessorApp', ['ngCookies','ui.date','ui.select2','ngTable'])
   .config(function ($routeProvider,$httpProvider) {
 
     $routeProvider
@@ -41,5 +41,12 @@ angular.module('messageProcessorApp', ['ngCookies','ui.date','ui.select2'])
                 $location.path('/');
             }
         });
+    })
+    .filter('mapTypeToName',function(){
+        return function(value){
+            if(value=='bd')return 'Birthday';
+            else if(value=='congrat')return 'Congratulation';
+            else return value;
+        }
     });
 

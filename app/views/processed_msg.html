@@ -1,11 +1,12 @@
 <div>
-    <div style="padding-top: 120px;"></div>
-    <div class="row">
-        processed
-    </div>
-
-
-
-
-
+    <table ng-table="tableParams" class="table table-striped table-hover table-condensed">
+        <tr ng-repeat="msg in $data">
+            <td data-title="'Name'" sortable="name">{{msg.name}}</td>
+            <td data-title="'Type'" sortable="type">{{msg.type | mapTypeToName}}</td>
+            <td data-title="'Baby Name'">{{msg.babyName}}</td>
+            <td data-title="'Birth Date'">{{msg.birthDate}}</td>
+            <td data-title="'Gift'">{{msg.gift}}</td>
+            <td data-title="'Process Date'" sortable="dateProcessed">{{msg.dateProcessed | date:'medium'}}</td>
+        </tr>
+    </table>
 </div>

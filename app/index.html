@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="bower_components/select2/select2.css">
         <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+        <link rel="stylesheet" href="bower_components/ng-table/ng-table.css">
 
         <!-- endbuild -->
        <link rel="stylesheet/less" type="text/css" href="styles/main.less" />
@@ -40,8 +41,7 @@
 
     <div style="padding-top: 100px;"></div>
     <div ng-controller="AlertCtrl">
-        <!--<alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>-->
-        <div ng-show="alert" class="alert alert-{{alert.type}} alert-dismissable col-md-6 col-md-offset-3">
+        <div ng-show="alert" ng-animate="{show:'animated fadeIn'}"class="alert alert-{{alert.type}} alert-dismissable col-md-6 col-md-offset-3">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true" ng-click="clearAlert()">&times;</button>
             <strong>{{alert.type}}!</strong> {{alert.msg}}
         </div>
@@ -92,6 +92,7 @@
         <script type="text/javascript" src="bower_components/angular-ui-date/src/date.js"></script>
         <script type="text/javascript" src="bower_components/select2/select2.js"></script>
         <script type="text/javascript" src="bower_components/angular-ui-select2/src/select2.js"></script>
+        <script type="text/javascript" src="bower_components/ng-table/ng-table.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->

@@ -88,9 +88,30 @@ angular.module('messageProcessorApp')
             return true;
         }
     }])
-    .controller('ProcessedMsgCtrl',['$scope',function($scope){
-        $scope.unprocessedMsg = [{id:'1',type:'bd',gift:'iphone',processed:false},
-            {id:'2',type:'congrat',babyName:'Ted',birthDate:'01-03-2011',processed:false}];
+    .controller('ProcessedMsgCtrl',['$scope','$filter','ngTableParams','MsgProcessorLogic',function($scope,$filter,ngTableParams,processorSvc){
+
+        var data = processorSvc.getProcessedList();
+
+        $scope.tableParams = new ngTableParams({
+            page: 1,            // show first page
+            count: 10,           // count per page
+            sorting: {
+                dateProcessed: 'desc'
+            }
+        }, {
+            total: data.length,
+            getData: function($defer, params) {
+                var orderedData = params.sorting() ?
+                    $filter('orderBy')(data, params.orderBy()) :
+                    data;
+
+                console.log('orderedData...');
+                console.log(orderedData);
+
+                $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+            }
+        });
+
     }])
     .controller('SignInCtrl',['$scope','$cookieStore','$route','$rootScope',function($scope,$cookieStore,$route,$rootScope){
         $scope.email = "";

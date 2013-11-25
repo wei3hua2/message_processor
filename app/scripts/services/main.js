@@ -33,6 +33,7 @@ angular.module('messageProcessorApp')
                     _unprocessedMsg = _.reject(_unprocessedMsg,function(msg){return id==msg.id && 'bd'==msg.type;});
 
                     _msg.gift = giftName;
+                    _msg.dateProcessed = new Date();
                     _processedMsg.push(_msg);
 
                     cb('success','Gift '+giftName+' processed');
