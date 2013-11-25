@@ -1,6 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Redressed);
 @import url(http://fonts.googleapis.com/css?family=Arbutus);
 
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+  background-image: -moz-linear-gradient(left, @startColor, @endColor);
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+  background-image: -moz-linear-gradient(top, @startColor, @endColor);
+  background-image: -ms-linear-gradient(top, @startColor, @endColor);
+  background-image: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -24,9 +42,19 @@ body {
   }
 }
 
+@msgproc-item-bg:#e0e9d6;
+
 .list-group-item.msgproc-item{
-  background-color: #e0e9d6;
+  background-color: @msgproc-item-bg;
   cursor:pointer;
+
+  &:hover{
+    background-color: darken(@msgproc-item-bg,10%);
+  }
+}
+.list-group-item.msgproc-item.active{
+  .horizontal-gradient(darken(@msgproc-item-bg,50%),darken(@msgproc-item-bg,60%));
+//  background-color: darken(@msgproc-item-bg,10%);
 }
 
 .msgproc-subheading{

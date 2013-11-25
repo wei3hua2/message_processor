@@ -29,6 +29,12 @@ angular.module('messageProcessorApp')
     ])
     .controller('ProcessMsgCtrl',['$scope','$rootScope','MsgProcessorLogic','MockData',function($scope,$rootScope,processorSvc,mockdata){
 
+        $scope.dateOptions = {
+            changeYear: true,
+            changeMonth: true,
+            yearRange: '2000:-0'
+        };
+
         var _resetData = function(){
             $scope.unprocessedMsg = processorSvc.getUnprocessedList();
             $scope.selected = undefined;
@@ -43,14 +49,16 @@ angular.module('messageProcessorApp')
                 gift:null,
                 giftList:mockdata.giftList
             }
+
         }
         _resetData();
 
         $scope.setSelected = function(id){
             $scope.selected = _.find($scope.unprocessedMsg,function(msg){return msg.id==id});
+            if($scope.selected)
+                $scope.selected.titleMsg = $scope.selected.type=='bd' ?
+                    'Approve '+$scope.selected.name+' Birthday Wish' : 'Approve '+$scope.selected.name+'\'s Baby Birthday';
         }
-
-
 
         $scope.approve = function(){
             if($scope.selected){
@@ -70,7 +78,8 @@ angular.module('messageProcessorApp')
         }
 
         $scope.isDisabledApproval = function(){
-            if($scope.selected.type=='bd'){
+            if(!$scope.selected){}
+            else if($scope.selected.type=='bd'){
                 if($scope.bd.gift)return false;
             }else if($scope.selected.type=='congrat'){
                 if($scope.congrat.babyName && $scope.congrat.dob)return false;

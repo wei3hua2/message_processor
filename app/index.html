@@ -18,6 +18,7 @@
 
         <link rel="stylesheet" href="bower_components/select2/select2.css">
         <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 
         <!-- endbuild -->
        <link rel="stylesheet/less" type="text/css" href="styles/main.less" />
@@ -46,7 +47,7 @@
         </div>
     </div>
 
-    <div class="container" ng-view=""></div>
+    <div class="container" ng-view="" ng-animate="{enter: 'animated fadeIn'}"></div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -61,7 +62,8 @@
     </script>
 
     <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    <!--<script src="bower_components/angular/angular.js"></script>-->
+    <script src="bower_components/angular-unstable/angular.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
 
         <!-- build:js scripts/plugins.js -->

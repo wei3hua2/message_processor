@@ -24,7 +24,6 @@ angular.module('messageProcessorApp', ['ngCookies','ui.date','ui.select2'])
         redirectTo: '/'
       });
 
-//      $httpProvider.responseInterceptors.push('httpInterceptor');
   })
     .run(function($rootScope,$location,$cookieStore){
 

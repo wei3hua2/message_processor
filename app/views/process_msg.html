@@ -7,16 +7,17 @@
                 </div>
                 <div class="list-group">
                     <a class="list-group-item msgproc-item"
-                       ng-repeat="thing in unprocessedMsg">
+                       ng-repeat="thing in unprocessedMsg"
+                       ng-class="{active: thing.id==selected.id}">
 
                         <div ng-click="setSelected(thing.id)">
                             <div ng-show="thing.type == 'bd'">
                                 <i class="glyphicon glyphicon-gift"></i>
-                                Send {{thing.name}} a Birthday Wish
+                                Send <b>{{thing.name}}</b> a Birthday Wish
                             </div>
                             <div ng-show="thing.type == 'congrat'">
                                 <i class="glyphicon glyphicon-bullhorn"></i>
-                                Congrat on the Birthday of {{thing.name}}'s baby
+                                Congratulation on the Birthday of <b>{{thing.name}}'s</b> baby
                             </div>
                         </div>
 
@@ -27,13 +28,12 @@
         </div>
 
         <div class="col-md-6">
-            <div class="panel panel-warning">
+            <div class="panel panel-warning" ng-show="selected" ng-animate="{show: 'animated fadeInRight'}">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Approve </h3>
+                    <h3 class="panel-title">{{selected.titleMsg}}</h3>
                 </div>
                 <div class="panel-body">
-                    <div ng-hide="selected">Not selected</div>
-                    <div ng-show="selected">
+                    <div>
                         <div ng-show="selected.type == 'bd'">
                             <div class="row">
                                 <label class="col-md-3" for="gift">Gift : </label>
@@ -45,7 +45,9 @@
                         <div ng-show="selected.type == 'congrat'">
                             <div class="row">
                                 <label class="col-md-3" for="DateOfBirth">DOB: </label>
-                                <div ui-date="dateOptions" name="DateOfBirth"></div>
+
+                                <div>{{congrat.dob}}</div>
+                                <div class="col-md-7" ui-date="dateOptions" ui-date-format="DD, d MM, yy" ng-model="congrat.dob" name="DateOfBirth"></div>
                                 <!--<input ui-date>-->
                                 <!--<input class="col-md-7" type="date" id="dob">-->
                             </div>
