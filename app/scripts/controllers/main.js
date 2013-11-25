@@ -68,6 +68,16 @@ angular.module('messageProcessorApp')
                 }
             }
         }
+
+        $scope.isDisabledApproval = function(){
+            if($scope.selected.type=='bd'){
+                if($scope.bd.gift)return false;
+            }else if($scope.selected.type=='congrat'){
+                if($scope.congrat.babyName && $scope.congrat.dob)return false;
+            }
+
+            return true;
+        }
     }])
     .controller('ProcessedMsgCtrl',['$scope',function($scope){
         $scope.unprocessedMsg = [{id:'1',type:'bd',gift:'iphone',processed:false},
