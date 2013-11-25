@@ -55,14 +55,16 @@ angular.module('messageProcessorApp')
         $scope.approve = function(){
             if($scope.selected){
                 if($scope.selected.type=='bd'){
-                    processorSvc.processGift($scope.selected.id,$scope.bd.gift,function(errorType,msg){
-                        $rootScope.$broadcast('alert:showMsg',errorType,msg);
-
+                    processorSvc.processGift($scope.selected.id,$scope.bd.gift,function(msgType,msg){
+                        $rootScope.$broadcast('alert:showMsg',msgType,msg);
                         _resetData();
                     });
                 }
                 else if($scope.selected.type=='congrat'){
-                    processorSvc.processCongrat($scope.selected.id,$scope.congrat.babyName,$scope.congrat.dob);
+                    processorSvc.processCongrat($scope.selected.id,$scope.congrat.babyName,$scope.congrat.dob,function(msgType,msg){
+                        $rootScope.$broadcast('alert:showMsg',msgType,msg);
+                        _resetData();
+                    });
                 }
             }
         }
