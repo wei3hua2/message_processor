@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('messageProcessorApp', ['ngCookies'])
+angular.module('messageProcessorApp', ['ngCookies','ui.date','ui.select2'])
   .config(function ($routeProvider,$httpProvider) {
 
     $routeProvider

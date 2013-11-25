@@ -23,12 +23,35 @@
                     <div ng-hide="selected">Not selected</div>
                     <div ng-show="selected">
                         <div ng-show="selected.type == 'bd'">
-                            bd
+                            <div class="row">
+                                <label class="col-md-3" for="gift">Gift : </label>
+                                <input class="col-md-7" id="gift">
+                            </div>
                         </div>
                         <div ng-show="selected.type == 'congrat'">
-                            congrat
+                            <div class="row">
+                                <label class="col-md-3" for="DateOfBirth">DOB: </label>
+                                <div ui-date="dateOptions" name="DateOfBirth"></div>
+                                <!--<input ui-date>-->
+                                <!--<input class="col-md-7" type="date" id="dob">-->
+                            </div>
+                            <div style="margin-bottom: 20px"></div>
+                            <div class="row">
+                                <label class="col-md-3" for="babyname">Baby Name: </label>
+                                <!--<input class="col-md-7" id="babyname">-->
+                                <select ui-select2 class="col-md-7" ng-model="select2" data-placeholder="Pick a number">
+                                    <option value=""></option>
+                                    <option value="one">First</option>
+                                    <option value="two">Second</option>
+                                    <option value="three">Third</option>
+                                </select>
+                            </div>
                         </div>
-                        <!--{{selected}}-->
+
+                        <div style="margin-bottom: 30px"></div>
+                        <div>
+                            <button type="submit" class="btn btn-primary pull-right">Approve</button>
+                        </div>
                     </div>
                 </div>
             </div>
