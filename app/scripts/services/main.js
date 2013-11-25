@@ -40,15 +40,19 @@ angular.module('messageProcessorApp')
                 }
 
             },
-            processCongrat : function(id, dob, babyName){
+            processCongrat : function(id, dob, babyName,cb){
                 var _msg = _.find(_unprocessedMsg,function(msg){
                     return id==msg.id && 'congrat'==msg.type;
                 });
+
                 _unprocessedMsg = _.reject(_unprocessedMsg,function(msg){return id==msg.id && 'congrat'==msg.type;});
 
                 _msg.birthDate = dob;
                 _msg.babyName = babyName;
+                _msg.dateProcessed = new Date();
                 _processedMsg.push(_msg);
+
+                cb('success','Congratulation message for '+_msg.name+' processed');
             },
             getAllGift : function(){
                 return _.filter(_processMsg,function(msg){return 'bd'==msg.type});

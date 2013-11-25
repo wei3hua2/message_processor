@@ -24,6 +24,8 @@ angular.module('messageProcessorApp')
 
         $scope.$on('alert:showMsg',function(evt,type,message){
             $scope.alert = {type:type,msg:message};
+            console.log('$scope.alert');
+            console.log($scope.alert);
         });
     }
     ])
@@ -69,7 +71,7 @@ angular.module('messageProcessorApp')
                     });
                 }
                 else if($scope.selected.type=='congrat'){
-                    processorSvc.processCongrat($scope.selected.id,$scope.congrat.babyName,$scope.congrat.dob,function(msgType,msg){
+                    processorSvc.processCongrat($scope.selected.id,$scope.congrat.dob,$scope.congrat.babyName,function(msgType,msg){
                         $rootScope.$broadcast('alert:showMsg',msgType,msg);
                         _resetData();
                     });
@@ -104,9 +106,6 @@ angular.module('messageProcessorApp')
                 var orderedData = params.sorting() ?
                     $filter('orderBy')(data, params.orderBy()) :
                     data;
-
-                console.log('orderedData...');
-                console.log(orderedData);
 
                 $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
             }

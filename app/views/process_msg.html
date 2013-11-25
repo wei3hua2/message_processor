@@ -48,13 +48,10 @@
 
                                 <div>{{congrat.dob}}</div>
                                 <div class="col-md-7" ui-date="dateOptions" ui-date-format="DD, d MM, yy" ng-model="congrat.dob" name="DateOfBirth"></div>
-                                <!--<input ui-date>-->
-                                <!--<input class="col-md-7" type="date" id="dob">-->
                             </div>
                             <div style="margin-bottom: 20px"></div>
                             <div class="row">
                                 <label class="col-md-3" for="babyname">Baby Name: </label>
-                                <!--<input class="col-md-7" id="babyname">-->
                                 <select ui-select2 class="col-md-7" ng-model="congrat.babyName" data-placeholder="Choose a name">
                                     <option ng-repeat="babyname in congrat.babyNameList" value="{{babyname}}">{{babyname}}</option>
                                 </select>
