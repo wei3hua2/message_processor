@@ -38,7 +38,8 @@ angular.module('messageProcessorApp')
         $scope.dateOptions = {
             changeYear: true,
             changeMonth: true,
-            yearRange: '2000:-0'
+            yearRange: '2000:-0',
+            maxDate:'-1d'
         };
 
         var _resetData = function(){
