@@ -11,9 +11,11 @@
 
                         <div ng-click="setSelected(thing.id)">
                             <div ng-show="thing.type == 'bd'">
+                                <i class="glyphicon glyphicon-gift"></i>
                                 Send {{thing.name}} a Birthday Wish
                             </div>
                             <div ng-show="thing.type == 'congrat'">
+                                <i class="glyphicon glyphicon-bullhorn"></i>
                                 Congrat on the Birthday of {{thing.name}}'s baby
                             </div>
                         </div>
