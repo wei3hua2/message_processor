@@ -12,6 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
+      <!--<link rel="stylesheet" href="styles/bootstrap.2.3.2/bootstrap.min.css">-->
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
         <link rel="stylesheet" href="styles/main.css">
@@ -31,6 +32,15 @@
 
 
     <div ng-include="" src=" 'views/menu.html' " ng-controller="MenuCtrl"></div>
+
+    <div style="padding-top: 100px;"></div>
+    <div ng-controller="AlertCtrl">
+        <!--<alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>-->
+        <div ng-show="alert" class="alert alert-{{alert.type}} alert-dismissable col-md-6 col-md-offset-3">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true" ng-click="clearAlert()">&times;</button>
+            <strong>{{alert.type}}!</strong> {{alert.msg}}
+        </div>
+    </div>
 
     <div class="container" ng-view=""></div>
 
@@ -80,6 +90,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/main.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
 </body>

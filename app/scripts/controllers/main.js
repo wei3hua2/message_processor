@@ -15,17 +15,49 @@ angular.module('messageProcessorApp')
         }
     }
     ])
-    .controller('ProcessMsgCtrl',['$scope',function($scope){
-        $scope.unprocessedMsg = [{id:'1',type:'bd',name:'Allan',gift:'iphone',processed:false},
-            {id:'2',type:'congrat',name:'Ted',birthDate:'01-03-2011',processed:false},
-            {id:'3',type:'congrat',name:'Dolly',birthDate:'01-03-2011',processed:false},
-            {id:'4',type:'congrat',name:'Maden',birthDate:'01-03-2011',processed:false},
-            {id:'5',type:'congrat',name:'Rei',birthDate:'01-03-2011',processed:false}];
+    .controller('AlertCtrl',['$scope','$rootScope',function($scope,$rootScope){
+
+        $scope.alert = undefined;
+        $scope.clearAlert = function(){
+            $scope.alert = undefined;
+        }
+
+        $scope.$on('alert:showMsg',function(evt,type,message){
+            $scope.alert = {type:type,msg:message};
+        });
+    }
+    ])
+    .controller('ProcessMsgCtrl',['$scope','$rootScope','MsgProcessorLogic','MockData',function($scope,$rootScope,processorSvc,mockdata){
+        $scope.unprocessedMsg = processorSvc.getUnprocessedList();
 
         $scope.selected = undefined;
 
         $scope.setSelected = function(id){
             $scope.selected = _.find($scope.unprocessedMsg,function(msg){return msg.id==id});
+        }
+
+        $scope.congrat = {
+            babyName:null,
+            dob:null,
+            babyNameList:mockdata.babyNameList
+        };
+
+        $scope.bd = {
+            gift:null,
+            giftList:mockdata.giftList
+        }
+
+        $scope.approve = function(){
+            if($scope.selected){
+                if($scope.selected.type=='bd'){
+                    processorSvc.processGift($scope.selected.id,$scope.bd.gift,function(errorType,msg){
+                        $rootScope.$broadcast('alert:showMsg',errorType,msg);
+                    });
+                }
+                else if($scope.selected.type=='congrat'){
+                    processorSvc.processCongrat($scope.selected.id,$scope.congrat.babyName,$scope.congrat.dob);
+                }
+            }
         }
     }])
     .controller('ProcessedMsgCtrl',['$scope',function($scope){
