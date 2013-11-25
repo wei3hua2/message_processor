@@ -13,6 +13,12 @@ angular.module('messageProcessorApp')
             $rootScope.loggeduser = null;
             $route.reload();
         }
+
+        $scope.msgCount = 0;
+
+        $scope.$on('msgCounter:update',function(evt,count){
+            $scope.msgCount = count;
+        });
     }
     ])
     .controller('AlertCtrl',['$scope','$rootScope',function($scope,$rootScope){
@@ -24,8 +30,6 @@ angular.module('messageProcessorApp')
 
         $scope.$on('alert:showMsg',function(evt,type,message){
             $scope.alert = {type:type,msg:message};
-            console.log('$scope.alert');
-            console.log($scope.alert);
         });
     }
     ])
@@ -52,6 +56,7 @@ angular.module('messageProcessorApp')
                 giftList:mockdata.giftList
             }
 
+            $rootScope.$broadcast('msgCounter:update',$scope.unprocessedMsg.length);
         }
         _resetData();
 
