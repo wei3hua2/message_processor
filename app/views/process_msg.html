@@ -7,9 +7,20 @@
                 </div>
                 <div class="list-group">
                     <a class="list-group-item"
-                       ng-repeat="thing in unprocessedMsg"
-                       display-item-list></a>
+                       ng-repeat="thing in unprocessedMsg">
+
+                        <div ng-click="setSelected(thing.id)">
+                            <div ng-show="thing.type == 'bd'">
+                                Send {{thing.name}} a Birthday Wish
+                            </div>
+                            <div ng-show="thing.type == 'congrat'">
+                                Congrat on the Birthday of {{thing.name}}'s baby
+                            </div>
+                        </div>
+
+                    </a>
                 </div>
+
             </div>
         </div>
 
@@ -27,7 +38,6 @@
                                 <select ui-select2 class="col-md-7" ng-model="bd.gift" data-placeholder="Choose a Gift">
                                     <option ng-repeat="gift in bd.giftList" value="{{gift}}">{{gift}}</option>
                                 </select>
-                                <!--<input class="col-md-7" id="gift">-->
                             </div>
                         </div>
                         <div ng-show="selected.type == 'congrat'">

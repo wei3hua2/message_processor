@@ -43,18 +43,4 @@ angular.module('messageProcessorApp', ['ngCookies','ui.date','ui.select2'])
             }
         });
     });
-//    .factory('httpInterceptor',['$q',function($q){
-//        return function(promise){
-//            return promise.then(function(resp){
-//                return resp;
-//            },function(response){
-//                if (response.status === 401) {
-//                    $rootScope.$broadcast('event:loginRequired');
-//                } else if (response.status >= 400 && response.status < 500) {
-//                    ErrorService.setError('Server was unable to find' +
-//                        ' what you were looking for... Sorry!!');
-//                }
-//                return $q.reject(response);
-//            });
-//        }
-//    }]);
+

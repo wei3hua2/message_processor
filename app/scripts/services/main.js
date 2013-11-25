@@ -35,7 +35,7 @@ angular.module('messageProcessorApp')
                     _msg.gift = giftName;
                     _processedMsg.push(_msg);
 
-                    cb('success','Gift processed');
+                    cb('success','Gift '+giftName+' processed');
                 }
 
             },

@@ -28,30 +28,37 @@ angular.module('messageProcessorApp')
     }
     ])
     .controller('ProcessMsgCtrl',['$scope','$rootScope','MsgProcessorLogic','MockData',function($scope,$rootScope,processorSvc,mockdata){
-        $scope.unprocessedMsg = processorSvc.getUnprocessedList();
 
-        $scope.selected = undefined;
+        var _resetData = function(){
+            $scope.unprocessedMsg = processorSvc.getUnprocessedList();
+            $scope.selected = undefined;
+
+            $scope.congrat = {
+                babyName:null,
+                dob:null,
+                babyNameList:mockdata.babyNameList
+            };
+
+            $scope.bd = {
+                gift:null,
+                giftList:mockdata.giftList
+            }
+        }
+        _resetData();
 
         $scope.setSelected = function(id){
             $scope.selected = _.find($scope.unprocessedMsg,function(msg){return msg.id==id});
         }
 
-        $scope.congrat = {
-            babyName:null,
-            dob:null,
-            babyNameList:mockdata.babyNameList
-        };
 
-        $scope.bd = {
-            gift:null,
-            giftList:mockdata.giftList
-        }
 
         $scope.approve = function(){
             if($scope.selected){
                 if($scope.selected.type=='bd'){
                     processorSvc.processGift($scope.selected.id,$scope.bd.gift,function(errorType,msg){
                         $rootScope.$broadcast('alert:showMsg',errorType,msg);
+
+                        _resetData();
                     });
                 }
                 else if($scope.selected.type=='congrat'){
@@ -73,16 +80,4 @@ angular.module('messageProcessorApp')
             $rootScope.loggeduser = {email:$scope.email};
             $route.reload();
         }
-    }])
-  .directive('displayItemList',[function(){
-        return {
-            templateUrl: 'views/directive/itemList.html',
-            restrict:'A',
-            link: function(scope, element, attrs){
-//                element.find('.open-btn').click(function(){
-//                    console.log(scope.item);
-//                    element.find('.modal').modal();
-//                });
-            }
-        }
-  }]);
+    }]);
