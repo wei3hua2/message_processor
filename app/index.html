@@ -40,7 +40,7 @@
     <div ng-include="" src=" 'views/menu.html' " ng-controller="MenuCtrl"></div>
 
     <div style="padding-top: 100px;"></div>
-    <div ng-controller="AlertCtrl">
+    <div ng-controller="AlertCtrl" ng-cloak>
         <div ng-show="alert" ng-animate="{show:'animated fadeIn'}"class="alert alert-{{alert.type}} alert-dismissable col-md-6 col-md-offset-3">
             <button type="button" class="close" ng-click="clearAlert()">&times;</button>
             <strong>{{alert.type}}!</strong> {{alert.msg}}

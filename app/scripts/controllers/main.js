@@ -2,19 +2,15 @@
 
 angular.module('messageProcessorApp')
   .controller('MainCtrl', ['$scope',function ($scope) {
-        $scope.messages = [
-            {type:'bd',gift:'iphone',processed:false},
-            {type:'congrat',babyName:'Ted',birthDate:'01-03-2011',processed:false}
-        ];
   }])
-    .controller('MenuCtrl',['$scope','$cookieStore','$route','$rootScope',function($scope,$cookieStore,$route,$rootScope){
+    .controller('MenuCtrl',['$scope','$cookieStore','$route','$rootScope','MsgProcessorLogic',function($scope,$cookieStore,$route,$rootScope,processorSvc){
         $scope.signout = function(){
             $cookieStore.remove('loggeduser');
             $rootScope.loggeduser = null;
             $route.reload();
         }
 
-        $scope.msgCount = 0;
+        $scope.msgCount = processorSvc.getUnprocessedList().length;
 
         $scope.$on('msgCounter:update',function(evt,count){
             $scope.msgCount = count;
@@ -30,6 +26,10 @@ angular.module('messageProcessorApp')
 
         $scope.$on('alert:showMsg',function(evt,type,message){
             $scope.alert = {type:type,msg:message};
+        });
+
+        $scope.$on('$routeChangeStart',function(event, next, current) {
+            $scope.alert = undefined;
         });
     }
     ])
