@@ -11,7 +11,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/bower_components/angular/angular.js',
+      'app/bower_components/angular-unstable/angular.js',
       'app/bower_components/jquery/jquery.js',
       'app/bower_components/underscore/underscore-min.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
@@ -20,6 +20,7 @@ module.exports = function(config) {
       'app/bower_components/angular-ui-select2/src/select2.js',
       'app/bower_components/jquery-ui/ui/*.js',
       'app/bower_components/angular-ui-date/src/date.js',
+        'app/bower_components/ng-table/ng-table.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',

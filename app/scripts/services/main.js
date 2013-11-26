@@ -6,7 +6,6 @@ angular.module('messageProcessorApp')
                {id:'21',type:'congrat',name:'Ted',birthDate:'',babyName:''},
                {id:'12',type:'bd',name:'Tony',gift:''},
                {id:'22',type:'congrat',name:'Dolly',birthDate:'',babyName:''},
-               {id:'23',type:'congrat',name:'Maden',birthDate:'',babyName:''},
                {id:'24',type:'congrat',name:'Rei',birthDate:'',babyName:''}],
            processedMsg : []
        },
