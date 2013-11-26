@@ -1,12 +1,16 @@
 <div>
+    <div msg-previewer></div>
+
     <table ng-table="tableParams" class="table table-striped table-hover table-condensed">
         <tr ng-repeat="msg in $data">
             <td data-title="'Name'" sortable="name">{{msg.name}}</td>
-            <td data-title="'Type'" sortable="type">{{msg.type | mapTypeToName}}</td>
-            <td data-title="'Baby Name'" sortable="babyName">{{msg.babyName}}</td>
-            <td data-title="'Birth Date'" sortable="birthDate">{{msg.birthDate}}</td>
-            <td data-title="'Gift' " sortable="gift">{{msg.gift}}</td>
+            <td data-title="'Proceeded /Sent Message'" sortable="name">{{msg.msg}}</td>
+            <!--<td data-title="'Type'" sortable="type">{{msg.type | mapTypeToName}}</td>-->
+            <!--<td data-title="'Baby Name'" sortable="babyName">{{msg.babyName}}</td>-->
+            <!--<td data-title="'Birth Date'" sortable="birthDate">{{msg.birthDate}}</td>-->
+            <!--<td data-title="'Gift' " sortable="gift">{{msg.gift}}</td>-->
             <td data-title="'Process Date'" sortable="dateProcessed">{{msg.dateProcessed | date:'medium'}}</td>
+            <td data-title="'View'"><a href="" ng-click="viewMessage({{msg.id}})">preview</a></td>
         </tr>
     </table>
 </div>

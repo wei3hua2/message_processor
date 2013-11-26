@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('messageProcessorApp')
-  .controller('MainCtrl', ['$scope',function ($scope) {
+  .controller('MainCtrl', ['$scope',function($scope) {
   }])
     .controller('MenuCtrl',['$scope','$cookieStore','$route','$rootScope','MsgProcessorLogic',function($scope,$cookieStore,$route,$rootScope,processorSvc){
         $scope.signout = function(){
@@ -54,11 +54,19 @@ angular.module('messageProcessorApp')
 
             $scope.bd = {
                 gift:null,
+                selected_gift_img:null,
                 giftList:mockdata.giftList
             }
 
             $rootScope.$broadcast('msgCounter:update',$scope.unprocessedMsg.length);
         }
+
+
+
+        $scope.$watch('bd.gift',function(){
+            $scope.bd.selected_gift_img = mockdata.giftToImgMapper($scope.bd.gift);
+        });
+
         _resetData();
 
         $scope.setSelected = function(id){
@@ -96,7 +104,7 @@ angular.module('messageProcessorApp')
             return true;
         }
     }])
-    .controller('ProcessedMsgCtrl',['$scope','$filter','ngTableParams','MsgProcessorLogic',function($scope,$filter,ngTableParams,processorSvc){
+    .controller('ProcessedMsgCtrl',['$scope','$rootScope','$filter','ngTableParams','MsgProcessorLogic','MockData',function($scope,$rootScope,$filter,ngTableParams,processorSvc,mockdata){
 
         var data = processorSvc.getProcessedList();
 
@@ -116,6 +124,15 @@ angular.module('messageProcessorApp')
                 $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
             }
         });
+
+        $scope.viewMessage = function(id){
+            var _item = _.find(data,function(item){return item.id==id;});
+            $scope.selectedMsg = _item;
+            if($scope.selectedMsg.type=='bd'){
+                $scope.selectedMsg.giftImg = mockdata.giftToImgMapper($scope.selectedMsg.gift);
+            }
+//            $rootScope.$broadcast('alert:showMsg','info','message');
+        }
 
     }])
     .controller('SignInCtrl',['$scope','$cookieStore','$route','$rootScope',function($scope,$cookieStore,$route,$rootScope){
