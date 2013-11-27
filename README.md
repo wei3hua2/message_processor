@@ -1,4 +1,4 @@
 message_processor
 =================
 
-message process for captiare
+Acme Email Message Processor Module By James Chong

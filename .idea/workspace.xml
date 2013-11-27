@@ -2,32 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/Nintendo_DS.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/amazon_kindle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/blackberry-B10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/empty_gift.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/harry_potter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/iphone5s.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/lego_character.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/nespresso.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/ps3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/toygun.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/gift/xperia-tablet-z-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/template/previewer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directory/main.js" afterPath="$PROJECT_DIR$/app/scripts/directory/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/main.js" afterPath="$PROJECT_DIR$/app/scripts/services/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.less" afterPath="$PROJECT_DIR$/app/styles/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/process_msg.html" afterPath="$PROJECT_DIR$/app/views/process_msg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/processed_msg.html" afterPath="$PROJECT_DIR$/app/views/processed_msg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/main.js" afterPath="$PROJECT_DIR$/test/spec/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/services/main.js" afterPath="$PROJECT_DIR$/test/spec/services/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="message_processor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385393878625" ignored="false" />
-    <file path="/main.js" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385477120375" ignored="false" />
+    <file path="/main.js" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385541776349" ignored="false" />
     <file path="/main.html" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385425701284" ignored="false" />
     <file path="/index.html" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385475392830" ignored="false" />
     <file path="/process_msg.html" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385478371440" ignored="false" />
@@ -43,6 +28,7 @@
     <file path="/alert.html" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385389435109" ignored="false" />
     <file path="/Gruntfile.js" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385427074356" ignored="false" />
     <file path="/previewer.html" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385477139374" ignored="false" />
+    <file path="/README.md" changelist="7a17b8ca-ff96-4d39-a05d-ed1a9911ff9a" time="1385542804607" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,36 +48,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="64" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process_msg.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/process_msg.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="57" selection-start="751" selection-end="751" vertical-scroll-proportion="0.3820034">
+            <state line="2" column="37" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#style#0;n#i#1;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#1;n#div#1;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#80#564#0" expanded="false" />
+                <element signature="e#594#1031#0" expanded="false" />
+                <element signature="e#1066#3548#0" expanded="false" />
+                <element signature="e#1201#1333#0" expanded="false" />
+                <element signature="e#1371#1886#0" expanded="false" />
+                <element signature="e#3585#4735#0" expanded="false" />
+                <element signature="e#4766#5124#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="95" selection-start="4764" selection-end="4764" vertical-scroll-proportion="0.0">
+            <state line="3" column="50" selection-start="87" selection-end="87" vertical-scroll-proportion="0.07188498">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/spec/controllers/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1127#3609#0" expanded="false" />
-                <element signature="e#3285#3602#0" expanded="false" />
+                <element signature="e#168#627#0" expanded="false" />
+                <element signature="e#672#2073#0" expanded="false" />
+                <element signature="e#2120#2564#0" expanded="false" />
+                <element signature="e#2605#3642#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -100,19 +91,20 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="23" selection-start="1599" selection-end="1614" vertical-scroll-proportion="0.0">
+            <state line="31" column="29" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1631#2566#0" expanded="false" />
-                <element signature="e#2599#4843#0" expanded="false" />
+                <element signature="e#2599#4723#0" expanded="false" />
+                <element signature="e#3904#4550#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/directory/main.js">
+        <entry file="file://$PROJECT_DIR$/test/spec/services/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="54" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+            <state line="10" column="28" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,22 +128,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/menu.html" />
         <option value="$PROJECT_DIR$/app/views/signin.html" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
-        <option value="$PROJECT_DIR$/test/spec/controllers/main.js" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/test/spec/services/main.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/dist/views/processed_msg.html" />
         <option value="$PROJECT_DIR$/app/styles/main.less" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/services/main.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/app/views/template/previewer.html" />
         <option value="$PROJECT_DIR$/app/views/processed_msg.html" />
         <option value="$PROJECT_DIR$/app/scripts/directory/main.js" />
         <option value="$PROJECT_DIR$/app/views/process_msg.html" />
+        <option value="$PROJECT_DIR$/test/spec/services/main.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/main.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/main.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -215,7 +207,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message_processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message_processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message_processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message_processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,32 +266,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,46 +306,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,22 +442,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="428" selection-end="428" vertical-scroll-proportion="0.3115016">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/spec/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="6" selection-start="382" selection-end="382" vertical-scroll-proportion="0.38338658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="44" selection-start="94" selection-end="94" vertical-scroll-proportion="0.049833886">
@@ -508,13 +462,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="75" selection-start="515" selection-end="515" vertical-scroll-proportion="0.29900333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/spec/services/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="60" selection-start="248" selection-end="248" vertical-scroll-proportion="0.16773163">
           <folding />
         </state>
       </provider>
@@ -547,23 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="64" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="95" selection-start="4764" selection-end="4764" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1127#3609#0" expanded="false" />
-            <element signature="e#3285#3602#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/processed_msg.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="89" selection-start="879" selection-end="879" vertical-scroll-proportion="0.29900333">
@@ -578,32 +508,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/main.js">
+    <entry file="file://$PROJECT_DIR$/app/views/process_msg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="23" selection-start="1599" selection-end="1614" vertical-scroll-proportion="0.0">
+        <state line="15" column="57" selection-start="751" selection-end="751" vertical-scroll-proportion="0.3820034">
           <folding>
-            <element signature="e#1631#2566#0" expanded="false" />
-            <element signature="e#2599#4843#0" expanded="false" />
+            <element signature="n#style#0;n#i#1;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#1;n#div#1;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="64" selection-start="152" selection-end="152" vertical-scroll-proportion="0.07188498">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/directory/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="54" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+        <state line="5" column="54" selection-start="265" selection-end="265" vertical-scroll-proportion="0.11980831">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/process_msg.html">
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="57" selection-start="751" selection-end="751" vertical-scroll-proportion="0.3820034">
+        <state line="31" column="29" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#style#0;n#i#1;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#1;n#div#1;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1631#2566#0" expanded="false" />
+            <element signature="e#2599#4723#0" expanded="false" />
+            <element signature="e#3904#4550#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/spec/services/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/spec/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#168#627#0" expanded="false" />
+            <element signature="e#672#2073#0" expanded="false" />
+            <element signature="e#2120#2564#0" expanded="false" />
+            <element signature="e#2605#3642#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="37" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#80#564#0" expanded="false" />
+            <element signature="e#594#1031#0" expanded="false" />
+            <element signature="e#1066#3548#0" expanded="false" />
+            <element signature="e#1201#1333#0" expanded="false" />
+            <element signature="e#1371#1886#0" expanded="false" />
+            <element signature="e#3585#4735#0" expanded="false" />
+            <element signature="e#4766#5124#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="50" selection-start="87" selection-end="87" vertical-scroll-proportion="0.07188498">
+          <folding />
         </state>
       </provider>
     </entry>

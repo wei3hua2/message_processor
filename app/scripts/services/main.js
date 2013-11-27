@@ -73,11 +73,9 @@ angular.module('messageProcessorApp')
 
                 cb('success','Congratulation message for '+_msg.name+' processed');
             },
-            getAllGift : function(){
-                return _.filter(_processMsg,function(msg){return 'bd'==msg.type});
-            },
-            getAllCongrat : function(){
-                return _.filter(_processMsg,function(msg){return 'congrat'==msg.type});
+            resetAll : function(){
+                _unprocessedMsg = mockData.msgProcessor.unprocessedMsg;
+                _processedMsg = [];
             }
 
         };

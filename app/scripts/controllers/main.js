@@ -1,8 +1,6 @@
 'use strict';
 
 angular.module('messageProcessorApp')
-  .controller('MainCtrl', ['$scope',function($scope) {
-  }])
     .controller('MenuCtrl',['$scope','$cookieStore','$route','$rootScope','MsgProcessorLogic',function($scope,$cookieStore,$route,$rootScope,processorSvc){
         $scope.signout = function(){
             $cookieStore.remove('loggeduser');
@@ -131,7 +129,6 @@ angular.module('messageProcessorApp')
             if($scope.selectedMsg.type=='bd'){
                 $scope.selectedMsg.giftImg = mockdata.giftToImgMapper($scope.selectedMsg.gift);
             }
-//            $rootScope.$broadcast('alert:showMsg','info','message');
         }
 
     }])
